@@ -2,15 +2,13 @@ package com.projeto.usuario.model;
 
 import io.quarkus.hibernate.orm.JsonFormat;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Usuario extends PanacheEntityBase {
 
     @Id
-    @Column(nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
     public String nome;

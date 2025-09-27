@@ -11,7 +11,6 @@ import java.util.List;
 
 @Path("/usuarios")
 @Produces(MediaType.APPLICATION_JSON)
-
 public class UsuarioResource {
 
     @GET
